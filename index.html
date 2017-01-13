@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>js_lessons_11-12</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="carousel-arrow-left"><span><img src="img/left.png" class="arrows" alt="left_arrow"></span></div>
+    <div class="carousel-hider">
+    <ul class="carousel-list">
+    	<li class="carousel-element"><img src="img/img1-min.jpg" alt="bridge"><p>picture 1</p></li>
+    	<li class="carousel-element"><img src="img/img2-min.jpg" alt="lighthouse"><p>picture 2</p></li>
+    	<li class="carousel-element"><img src="img/img3-min.jpg" alt="the mountains"><p>picture 3</p></li>
+    	<li class="carousel-element"><img src="img/img4-min.jpg" alt="rock"><p>picture 4</p></li>
+    	<li class="carousel-element"><img src="img/img5-min.jpg" alt="surfer on the beach"><p>picture 5</p></li>
+    	<li class="carousel-element"><img src="img/img6-min.jpg" alt="landscape"><p>picture 6</p></li>
+    	<li class="carousel-element"><img src="img/img7-min.jpg" alt="lake"><p>picture 7</p></li>
+    	<li class="carousel-element"><img src="img/img8-min.jpg" alt="parachute jumper"><p>picture 8</p></li>
+    	<li class="carousel-element"><img src="img/img9-min.jpg" alt="lake"><p>picture 9</p></li>
+    	<li class="carousel-element"><img src="img/img10-min.jpg" alt="frosty morning"><p>picture 10</p></li>
+    	<li class="carousel-element"><img src="img/img11-min.jpg" alt="frosty morning"><p>picture 11</p></li>
+    	<li class="carousel-element"><img src="img/img12-min.jpg" alt="sunset"><p>picture 12</p></li>
+    </ul>
+    </div>
+    <div class="carousel-arrow-right"><span><img src="img/right.png" class="arrows" alt="right_arrow"></span></div> 
+    <div class="clearfix"></div>
+    </div>
+
+    <!--TEMPLATE-->
+
+    <script type="text/html" id="test">
+
+        <% for (var i = 0; i < data.length; i++) { %>
+            <h3 class="title"><%= data[i].title %></h3>
+             <% if (i == 1) { %>
+                <li><%= data[i].itemOne %></li>
+                <li><%= data[i].itemTwo %></li>
+                <li><%= data[i].itemThree %></li>
+            <% } %>
+            <p><%= data[i].content%></p>
+        <% }; %>
+    
+    </script>
+
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
